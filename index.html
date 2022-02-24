@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc's gedicht</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Het is <span></span> dagen geleden dat Marc zijn gedicht moest schrijven.</h1>
+        <h2>Zou het nog gebeuren? </h2>
+    </hgroup>
+</body>
+
+<script>
+
+const then = new Date("2022/01/21");
+
+function getDaysUntil(date) {
+    const now = new Date();
+    const dif = date - now;
+    return Math.floor(dif / 1000 / 60 / 60 / 24 * -1);
+}
+
+
+document.querySelector("h1 span").textContent = getDaysUntil(then)
+</script>
+
+
+<style>
+    * { margin: 0; padding: 0; font-family: sans-serif;}
+    body{ display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: aliceblue;  color: #353535; }
+    hgroup { display: flex;flex-direction: column; align-items: center; width: calc(100% - 4rem);  text-align: center; transform: translateY(-50%);}
+    h1{ margin-bottom: 1rem;}
+    h1 span { color: darkblue;  }
+</style>
+
+</html>
