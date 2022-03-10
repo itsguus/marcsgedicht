@@ -15,7 +15,9 @@
     }
 
 
-    document.querySelector("h1 span").textContent = getDaysUntil(then)
+    document.querySelector("h1 span").textContent = getDaysUntil(then);
+
+    document.querySelector("meta[name=description]").setAttribute("content", `Het is ${getDaysUntil(then)} dagen geleden dat Marc zijn gedicht moest schrijven. Zou het nog gebeuren? `)
 </script>
 
 
